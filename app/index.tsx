@@ -1,14 +1,17 @@
-import { StatusBar, Text, View } from 'react-native'
+import { ScrollView, StatusBar, Text, View } from 'react-native'
 import React from 'react'
 import { Link } from 'expo-router'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const index = () => {
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-3xl font-pblack">index!</Text>
-      <StatusBar barStyle='default' />
-      <Link href="/home" style={{color: 'blue'}}>Go to Home</Link>
-    </View>
+    <SafeAreaView className='bg-primary h-full'>
+      <ScrollView contentContainerStyle={{
+        height: '100%'
+      }}>
+
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 

@@ -24,11 +24,12 @@ const SignIn = () => {
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView>
-        <View className="w-full justify-center h-full px-4 my-6">
+        <View className="w-full justify-center min-h-[90vh] px-4 my-6">
         <Image
-        source={images.logo}
-        className="w-[130px] h-[50px]"/>
-        <Text className="text-2xl text-white font-psemibold mt-5">
+        source={images.logoSmall}
+        className="h-[50px] w-[100px] mt-5"
+        resizeMode="contain"/>
+        <Text className="text-2xl text-white font-psemibold mt-7">
           Log in to index!
         </Text>
 
@@ -37,7 +38,7 @@ const SignIn = () => {
         value={form.email}
         handleChangeText={(e) => setForm({...form, email: e})}
         otherStyles="mt-7"
-        keyboadType="email"
+        keyboadType="email-address"
         />
 
 <FormField 
@@ -45,7 +46,6 @@ const SignIn = () => {
         value={form.password}
         handleChangeText={(e) => setForm({...form, password: e})}
         otherStyles="mt-7"
-        keyboadType="password"
         />
 
 <CustomButton
@@ -56,7 +56,7 @@ const SignIn = () => {
 
         <View className="justify-center pt-5 flex-row gap-2">
         <Text className="text-lg text-gray-100 font-pregular">
-          Don't have account?
+          Don't have an account?
         </Text>
         <Link href="/sign-up" className="text-lg font-psemibold text-secondary">Sign Up</Link>
         </View>
